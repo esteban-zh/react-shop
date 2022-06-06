@@ -1,0 +1,128 @@
+@import 'vars';
+
+ nav {
+     display: flex;
+     justify-content: space-between;
+     border-bottom: var(--text-input-field) 2px solid;
+     height: 58px;
+     margin-bottom: 28px;
+ }
+
+ .nav-menu .yard {
+     width: 150px;
+     height: 54px;
+     margin-left: 50px;
+ }
+
+ .nav-menu .menu {
+     display: none;
+ }
+
+ .nav-menu {
+     display: flex;
+ }
+
+ .nav-menu ul {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     list-style: none;
+     padding: 0;
+     margin: 0 0 0 50px;
+ }
+
+ .nav-menu ul li a {
+     text-decoration: none;
+     color: var(--Very-light-pink);
+     padding: 4px 12px 4px 12px;
+     border-radius: 8px;
+ }
+
+ .nav-menu ul li a:hover {
+     border: solid var(--hospital-green) 1px;
+     color: var(--hospital-green);
+     font-weight: bold;
+ }
+
+ .sign-cart ul {
+     list-style: none;
+     display: flex;
+     align-items: center;
+     margin: 5px;
+ }
+
+ .sign-cart .icons img {
+     width: 30px;
+     height: 30px;
+     margin-top: 10px;
+     margin-right: 48px;
+    cursor: pointer;
+ }
+
+ .sign-cart .signin a {
+     text-decoration: none;
+     color: var(--hospital-green);
+     font-size: var(--sm);
+     font-weight: bold;
+     margin-right: 24px;
+ }
+ .sign-cart .signin img {
+    margin: 0 28px 0 4px;
+    transform: rotate(90deg);
+    cursor: pointer;
+ }
+
+ .icons {
+     position: relative;
+ }
+
+ .icons div {
+     width: 14px;
+     height: 14px;
+     border-radius: 50%;
+     background-color: var(--hospital-green);
+     position: absolute;
+     top: 10px;
+     left: 22px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: var(--sm);
+     font-weight: bold;
+ }
+
+ @media (max-width: 640px) {
+     nav {
+         border-bottom: none;
+     }
+
+     .nav-menu {
+         border-bottom: solid var(--text-input-field) 2px;
+     }
+
+     .nav-menu ul {
+         display: none;
+     }
+
+     .nav-menu .yard {
+         margin: 0 100px 0 100px;
+         justify-content: center;
+     }
+
+     .sign-cart {
+         border-bottom: var(--text-input-field) solid 2px;
+     }
+
+     .sign-cart ul .signin {
+         display: none;
+     }
+
+     nav .nav-menu .menu {
+         display: inline;
+         margin: 14px 0 14px 24px;
+     }
+
+     .sign-cart img {
+         margin-right: 20px;
+     }
+ }

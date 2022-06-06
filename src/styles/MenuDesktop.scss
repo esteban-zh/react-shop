@@ -1,0 +1,44 @@
+@import 'vars';
+
+.menu-desktop {
+    width: 100px;
+    height: auto;
+    border: solid var(--Very-light-pink) 1px;
+    border-radius: 6px;
+    padding: 0px 20px 0px 20px;
+    position: absolute;
+    right: 108px;
+    top: 60px;
+    background-color: white;
+}
+
+.menu-desktop ul {
+    padding: 0px;
+    margin: 0;
+}
+
+.menu-desktop ul li {
+    text-align: end;
+    list-style: none;
+    margin: 20px 0 20px 0;
+}
+
+.menu-desktop ul li:nth-child(1),
+.menu-desktop ul li:nth-child(2) {
+    font-weight: bold;
+}
+
+.menu-desktop ul li:last-child {
+    font-size: var(--md);
+    padding-top: 20px;
+    border-top: solid var(--Very-light-pink) 1px;
+}
+
+.menu-desktop ul li:last-child a {
+    color: var(--hospital-green);
+}
+
+.menu-desktop ul li a {
+    text-decoration: none;
+    color: var(--black);
+}

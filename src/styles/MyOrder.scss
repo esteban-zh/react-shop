@@ -1,0 +1,77 @@
+@import 'vars';
+
+.orders-container {
+    width: 360px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    border: solid 1px var(--text-input-field);
+    padding: 14px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.shoping-cart-flecha {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.shoping-cart-flecha img {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+}
+
+.shoping-cart-flecha span {
+    font-size: var(--lg);
+    font-weight: bold;
+}
+
+.order-card {
+    padding: 14px 28px 14px 28px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0 14px 0;
+    background-color: var(--text-input-field);
+}
+
+.order-card .info .total {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.order-card .total-price {
+    align-self: center;
+    font-weight: bold;
+}
+
+
+
+.primary-button {
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 54px;
+}
+
+@media (max-width: 640px) {
+    .title {
+        display: none;
+    }
+
+    .shoping-cart-flecha img {
+        display: none;
+    }
+
+    .orders-container {
+        width: 92%;
+    }
+}

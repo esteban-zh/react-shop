@@ -1,0 +1,33 @@
+@import 'vars';
+
+.product-detail {
+    width: 360px;
+    position: absolute;
+    right: 0;
+    background-color: white;
+}
+
+.product-detail-close {
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.product-detail-close img {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.product-detail>img:nth-child(2) {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 0 0 20px 20px;
+}

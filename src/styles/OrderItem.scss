@@ -1,0 +1,37 @@
+@import 'vars';
+
+.product-card {
+    width: 454px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    padding: 10px 0 10px 0;
+}
+
+.product-card .name {
+    color: var(--Very-light-pink);
+    align-self: center;
+    margin-left: 15px;
+    font-size: var(--sm);
+}
+
+.product-card .price {
+    align-self: center;
+    font-weight: bold;
+}
+
+.product-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+@media (max-width: 640px) {
+    .product-card {
+        width: 328px;
+    }
+
+    .title {
+        display: none;
+    }
+}

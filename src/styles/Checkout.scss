@@ -1,0 +1,48 @@
+@import 'vars';
+
+.orders-container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-content: center;
+}
+
+.title {
+    margin-top: 80px;
+    font-size: var(--lg);
+}
+
+.order-card {
+    padding: 5px 30px 5px 30px;
+    border-radius: 10px;
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    margin: 35px 0 14px 0;
+    background-color: var(--text-input-field);
+}
+
+.order-card .info .date {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.order-card .info .quantity {
+    margin-top: 0;
+    color: var(--Very-light-pink);
+}
+
+.order-card .total-price {
+    align-self: center;
+    font-weight: bold;
+}
+
+@media (max-width: 640px) {
+    .order-card {
+        width: 280px;
+    }
+
+    .title {
+        display: none;
+    }
+}

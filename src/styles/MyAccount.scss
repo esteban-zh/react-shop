@@ -1,0 +1,72 @@
+ @import 'vars';
+ 
+ .login {
+     width: 100%;
+     height: 100vh;
+     display: grid;
+     place-items: center;
+ }
+
+ .form-container {
+     display: grid;
+     grid-template-rows: auto 1fr auto;
+     width: 300px;
+ }
+
+ .logo {
+     width: 150px;
+     margin-bottom: 48px;
+     justify-self: center;
+     display: none;
+ }
+
+ .title {
+     font-size: var(--lg);
+     margin-bottom: 50px;
+     text-align: start;
+ }
+
+ .form {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .label {
+     font-size: var(--md);
+     font-weight: bold;
+ }
+
+ .value {
+     color: var(--Very-light-pink);
+     margin-bottom: 40px;
+     font-size: var(--lg);
+ }
+
+ .secondary-button {
+     background-color: var(--white);
+     border-radius: 8px;
+     border: solid 1px var(--hospital-green);
+     color: var(--hospital-green);
+     width: 100%;
+     cursor: pointer;
+     font-size: var(--md);
+     font-weight: bold;
+     height: 50px;
+ }
+
+ .edit-button {
+     margin-top: 30px;
+     margin-bottom: 30px;
+ }
+
+ @media (max-width: 640px) {
+     .logo {
+         display: block;
+     }
+ }
+
+ @media (max-width: 640px) {
+     .edit-button {
+         margin-top: 200px;
+     }
+ }
