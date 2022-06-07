@@ -12,12 +12,16 @@ import CreateAccount from '@pages/CreateAccount';
 // import Checkout from '@pages/Checkout';
 import Home from '@pages/Home';
 import AppContext from '@context/AppContext';
+import DetailsContext from '@context/DetailsContext';
 import useInitialState from '@hooks/useInitialState';
+import useDetailState from '@hooks/useDetailState';
 import '@styles/global.css';
 
 const App = () => {
-  const initialState = useInitialState();
+  const initialState = useInitialState(); 
+  const detailState = useDetailState();
   return (
+    <DetailsContext.Provider value = {detailState}>
     <AppContext.Provider value={initialState}>
       <BrowserRouter>
         <Layout>
@@ -36,6 +40,7 @@ const App = () => {
         </Layout>    
       </BrowserRouter>
     </AppContext.Provider>
+    </DetailsContext.Provider>
   )
 }
 

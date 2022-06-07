@@ -1,24 +1,24 @@
 import React from 'react'
-import suplemets from '@logos/suplementos.jpg';
 import cart from '@icons/bt_add_to_cart.svg';
 import '@styles/ProductInfo.scss';
 
-const ProductInfo = () => {
+const ProductInfo = ( {product} ) => {
+
+  console.log("producto de info",product)
+
   return (
     <>
-      <img src={suplemets} alt="img" />
+      <img src={product.images[0]} alt="img" />
       <div className="points">
         <span />
         <span />
         <span />
       </div>
       <div className="product-info">
-        <p>$ 100,00</p>
-        <p>Nitro tech</p>
+        <p>$ {product.price}</p>
+        <p>{product.title}</p>
         <p>
-          Nitro-Tech is a scientifically engineered, enhanced whey protein
-          formula designed for all athletes who are looking for more muscle,
-          more strength and better performance.
+          {product.description} 
         </p>
         <button className="primary-button add-to-cart-button">
           <img src={cart} alt="cart" />

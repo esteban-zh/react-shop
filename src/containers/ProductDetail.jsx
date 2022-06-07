@@ -2,17 +2,20 @@ import React, {useContext} from 'react'
 import close from '@icons/icon_close.png';
 import ProductInfo from '@components/ProductInfo';
 import AppContext from '@context/AppContext';
+import DetailsContext from '@context/DetailsContext';
 import '@styles/ProductDetail.scss';
 
 const ProductDetail = () => {
-  const { state } = useContext(AppContext);
+  const { stateDetail } = useContext(DetailsContext);
+
+  console.log("statedetail", stateDetail.detail)
 
   return (
     <aside className="product-detail">
         <div className="product-detail-close">
             <img src={close} alt="close" />
         </div>
-        <ProductInfo />
+        <ProductInfo product={stateDetail.detail[0]}/>
     </aside>
   )
 }

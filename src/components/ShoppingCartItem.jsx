@@ -5,6 +5,7 @@ import '@styles/ShoppingCartItem.scss'
 
 const ShoppingCartItem = ( {product} ) => {
   const { removeToCart } = useContext(AppContext);
+  console.log("product de shooping",product)
 
   const handleClickRemoveToCart = product => {
     removeToCart(product);
@@ -13,8 +14,8 @@ const ShoppingCartItem = ( {product} ) => {
   return (
     <>
         <div className="product-card">
-            <img src={product.images[0]} alt={product.name} />
-            <p className="name">{product.name}</p>
+            <img src={product.images[0]} alt={product.title} />
+            <p className="name">{product.title}</p>
             <p className="price">${product.price}</p>
             <img src={close} alt  onClick={()=> handleClickRemoveToCart(product)}/>
         </div>
