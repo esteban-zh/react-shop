@@ -14,7 +14,7 @@ const ProductInfo = ( {product} ) => {
         <span />
         <span />
       </div>
-      <div className="product-info">
+      <div className="product-info-detail">
         <p>$ {product.price}</p>
         <p>{product.title}</p>
         <p>

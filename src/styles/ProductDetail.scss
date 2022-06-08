@@ -5,6 +5,8 @@
     position: absolute;
     right: 0;
     background-color: white;
+    border-radius: 8px;
+    border: solid 1px var(--Very-light-pink);
 }
 
 .product-detail-close {
@@ -30,4 +32,5 @@
     height: 360px;
     object-fit: cover;
     border-radius: 0 0 20px 20px;
+    border-radius: 8px;
 }

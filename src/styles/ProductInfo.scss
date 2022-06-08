@@ -19,23 +19,23 @@
     cursor: pointer;
 }
 
-.product-info {
+.product-info-detail {
     padding: 18px;
 }
 
-.product-info p:nth-child(1) {
+.product-info-detail p:nth-child(1) {
     font-weight: bold;
     font-size: var(--lg);
     margin: 10px 0 0px 0px;
 }
 
-.product-info p:nth-child(2) {
+.product-info-detail p:nth-child(2) {
     color: var(--Very-light-pink);
     font-size: var(--lg);
     margin-top: 4px;
 }
 
-.product-info p:nth-child(3) {
+.product-info-detail p:nth-child(3) {
     color: var(--Very-light-pink);
     font-size: var(--md);
     margin-bottom: 54px;
