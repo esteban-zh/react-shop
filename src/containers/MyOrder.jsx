@@ -18,8 +18,8 @@ const MyOrder = () => {
             <img src={flecha} alt="flecha" />
             <span className="title-order">Shopping cart</span>
         </div>
-        {state.cart.map(product => (
-          <ShoppingCartItem product={product} key={`ShoppingCartItem- ${product.id}`}/>
+        {state.cart.map((product, index) => (
+          <ShoppingCartItem product={product} key={`ShoppingCartItem- ${index}`} indexValue={index}/>
         ))}       
         <div className="order-card">
             <div className="info">

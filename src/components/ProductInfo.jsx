@@ -4,8 +4,6 @@ import '@styles/ProductInfo.scss';
 
 const ProductInfo = ( {product} ) => {
 
-  console.log("producto de info",product)
-
   return (
     <>
       <img src={product.images[0]} alt="img" />

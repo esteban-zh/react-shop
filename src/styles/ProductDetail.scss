@@ -2,8 +2,9 @@
 
 .product-detail {
     width: 360px;
-    position: absolute;
+    position: fixed;
     right: 0;
+    top:60px;
     background-color: white;
     border-radius: 8px;
     border: solid 1px var(--Very-light-pink);

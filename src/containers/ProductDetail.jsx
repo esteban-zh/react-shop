@@ -8,8 +8,6 @@ import '@styles/ProductDetail.scss';
 const ProductDetail = () => {
   const { stateDetail } = useContext(DetailsContext);
 
-  console.log("statedetail", stateDetail.detail)
-
   return (
     <aside className="product-detail">
         <div className="product-detail-close">

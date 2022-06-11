@@ -4,7 +4,7 @@ const detailState = {
     detail: [],
 }
 
-const useDetailState = () => {
+const useDetailState = (detailState) => {
     const [stateDetail, setStateDetail] = useState(detailState);
 
     const showDetails = (payload) => {
