@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
 import Menu from '@components/Menu';
+import MenuMobile from '@components/MenuMobile';
 import MyOrder from '@containers/MyOrder';
 import menu from '@icons/icon_menu.svg';
 import yard from '@logos/logo_yard_sale.svg';
@@ -11,6 +12,7 @@ import '@styles/Header.scss';
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [toggleOrders, setToggleOrders] = useState(false);
+  const [touch, setTouch] = useState(false)
   const { state } = useContext(AppContext);
 
   const handleToggle = () => {
@@ -21,10 +23,14 @@ const Header = () => {
       setToggleOrders(!toggleOrders);
   }
 
+  const handleTouch = () => {
+      setTouch(!touch);
+  }
+
   return (
     <nav>
         <div className="nav-menu">
-            <img className="menu" src={menu} alt="menu" />
+            <img onTouchStart={handleTouch} className="menu" src={menu} alt="menu" />
             <img className="yard" src={yard} alt="logo" />
             <ul>
                 <li>
@@ -47,6 +53,7 @@ const Header = () => {
                 </li>
             </ul>
         </div>
+        {touch && <MenuMobile />}       
         <div className="sign-cart">
             <ul>
             <li className="signin" >
@@ -58,7 +65,7 @@ const Header = () => {
                 {state.cart.length > 0 ? <div>{state.cart.length}</div> : null }
             </li>
             </ul>
-        </div>       
+        </div>
         {toggle && <Menu />}
         {toggleOrders && <MyOrder toggleOrders={toggleOrders} setToggleOrders={setToggleOrders}/>}       
     </nav>
