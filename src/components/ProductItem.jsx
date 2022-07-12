@@ -31,7 +31,7 @@ export const ProductItem = ( {product} ) => {
             <img onClick={() => handleClickAddToCart(product)} src={ImgAddToCart} alt="cart" />
           </div>
         </div>
-        {toggle && <ProductDetail />}
+        {toggle && <ProductDetail toggle={toggle} setToggle={setToggle} />}
     </>
   );
 };
