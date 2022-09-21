@@ -24,6 +24,7 @@ module.exports = {
             '@routes': path.resolve(__dirname, 'src/routes/'),
             '@hooks': path.resolve(__dirname, 'src/hooks/'),
             '@context': path.resolve(__dirname, 'src/context/'),
+            '@constants': path.resolve(__dirname, 'src/constants/'),
         }
     },
     module: { // loaders para cada tipo de archivo
@@ -32,7 +33,7 @@ module.exports = {
                 test: /\.(js|jsx)$/, // extensiones en las cuales actuará babel
                 exclude: /node_modules/, // siempre excluir node modules 
                 use: { // indicamos el loader
-                    loader: 'babel-loader' // babel 
+                    loader: 'babel-loader',// babel 
                 }
             },
             {
