@@ -8,8 +8,8 @@ import NewPassword from '@pages/NewPassword';
 import NotFound from '@pages/NotFound';
 import Login from '@pages/Login';
 import MyAccount from '@pages/MyAccount';
+import Orders from '@pages/Orders';
 import CreateAccount from '@pages/CreateAccount';
-// import Checkout from '@pages/Checkout';
 import Home from '@pages/Home';
 import AppContext from '@context/AppContext';
 import DetailsContext from '@context/DetailsContext';
@@ -25,15 +25,16 @@ const App = () => {
     <AppContext.Provider value={initialState}>
       <BrowserRouter>
         <Layout>
-          <Header />
+          <Header/>
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/login" element={<Login/>} />
+            <Route path="/my-account" element={<MyAccount/>} />
+            <Route path="/orders" element={<Orders/>} />
             <Route path="/password-recovery" element={<PasswordRecovery/>} />
             <Route path="/email-sent" element={<EmailSent/>} />
             <Route path="/new-password" element={<NewPassword/>} />
-            <Route path="/account" element={<MyAccount/>} />
-            <Route path="/signup" element={<CreateAccount/>} />
+            <Route path="/sign-up" element={<CreateAccount/>} />
             {/* <Route path="/checkout" element={<Checkout/>} /> */}
             <Route path= "*" element={<NotFound/>} />
           </Routes>

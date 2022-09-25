@@ -1,0 +1,55 @@
+@import 'vars';
+        
+.orders {
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-content: center;
+}
+
+.title {
+    margin-top: 130px;
+    margin-bottom: 30px;
+    font-size: var(--lg);
+}   
+.order-card {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+
+.order-card .info .date {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.order-card .info .quantity {
+    margin-top: 4px;
+    color: var(--Very-light-pink);
+}
+
+.order-card .right {
+    display: flex;
+    align-items: center;
+}
+
+.order-card .total-price {
+    align-self: center;
+    font-weight: bold;
+}
+
+.order-card img {
+    padding-left: 20px;
+}
+
+@media (max-width: 640px) {
+    .order-card {
+        width: 280px;
+    }
+
+    .title {
+        display: none;
+    }
+}
+
+        

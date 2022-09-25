@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react'
+import {useNavigate, Link} from 'react-router-dom';
 import Menu from '@components/Menu';
 import MenuMobile from '@components/MenuMobile';
 import MyOrder from '@containers/MyOrder';
@@ -14,6 +15,7 @@ const Header = () => {
   const [toggleOrders, setToggleOrders] = useState(false);
   const [touch, setTouch] = useState(false)
   const { state } = useContext(AppContext);
+  const navigate = useNavigate();
 
   const handleToggle = () => {
       setToggle(!toggle);
@@ -27,11 +29,13 @@ const Header = () => {
       setTouch(!touch);
   }
 
+  const handleClick = () => navigate('/');
+
   return (
     <nav>
         <div className="nav-menu">
             <img onTouchStart={handleTouch} className="menu" src={menu} alt="menu" />
-            <img className="yard" src={yard} alt="logo" />
+            <img onClick={handleClick} className="yard" src={yard} alt="logo" />
             <ul>
                 <li>
                     <a href="/">All</a>
@@ -57,7 +61,7 @@ const Header = () => {
         <div className="sign-cart">
             <ul>
             <li className="signin" >
-                <span>Esteban@gmail.com </span> 
+                <Link to="/sign-up"><span> Sign Up </span></Link> 
                 <img onClick={handleToggle} src={flechita} alt="flechita" />
             </li>
             <li className="icons">

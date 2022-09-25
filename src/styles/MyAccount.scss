@@ -43,15 +43,21 @@
  }
 
  .secondary-button {
-     background-color: var(--white);
+     background-color: var(--hospital-green);
      border-radius: 8px;
      border: solid 1px var(--hospital-green);
-     color: var(--hospital-green);
+     color: var(--white);
      width: 100%;
      cursor: pointer;
      font-size: var(--md);
      font-weight: bold;
      height: 50px;
+ }
+ .home {
+    border: solid 1px var(--hospital-green);
+    font-weight: bold;
+    border-radius: 8px;
+    height: 26px;
  }
 
  .edit-button {
