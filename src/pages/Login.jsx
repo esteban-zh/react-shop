@@ -7,8 +7,6 @@ const Login = () => {
   const form = useRef(null);
   const {handleAuth, stateAuth}= useContext(AuthContext);
 
-  console.log("al dar clik en creat llega a login", stateAuth);
-
   const handleSubmit = (/*event*/) => {
     // event.preventDefault();
     // const formData = new FormData(form.current);

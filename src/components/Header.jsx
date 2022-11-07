@@ -25,8 +25,6 @@ const Header = () => {
 
 console.log("statetheme en header", stateTheme)
 
-//   console.log("llega auth de context a header", stateAuth);
-
   const handleToggle = () => {
     setToggle(!toggle);
   };

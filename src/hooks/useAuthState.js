@@ -13,7 +13,6 @@ const useAuthState = () => {
             setStateAuth(true)
         }
     };
-    console.log("costumer hook auth funciona", stateAuth)
     return {
         handleAuth,
         stateAuth,
