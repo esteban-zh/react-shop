@@ -34,6 +34,21 @@
      padding: 0;
      margin: 0 0 0 50px;
  }
+ ul .black{
+    margin-right: 20px;
+    background-color: black;
+    color:white;
+    border-radius: 8px;
+    padding: 4px;
+    border: solid 1px black;
+
+ }
+ ul .light{
+    margin-right: 20px;
+    border-radius: 8px;
+    border:solid 1px black;
+    padding: 4px;
+ }
 
  .nav-menu ul li a {
      text-decoration: none;
@@ -116,6 +131,12 @@
      .sign-cart {
          border-bottom: var(--text-input-field) solid 2px;
      }
+      ul .black{
+        display: none;
+      }
+      ul .light{
+        display: none;
+      }
 
      .sign-cart ul .signin {
          display: none;

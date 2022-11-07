@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from '@components/Header';
 import Layout from '@containers/Layout';
@@ -11,18 +11,27 @@ import MyAccount from '@pages/MyAccount';
 import Orders from '@pages/Orders';
 import CreateAccount from '@pages/CreateAccount';
 import Home from '@pages/Home';
+import ThemeContext from '@context/ThemeContext';
 import AppContext from '@context/AppContext';
 import DetailsContext from '@context/DetailsContext';
+import AuthContext from '@context/AuthContext';
 import useInitialState from '@hooks/useInitialState';
 import useDetailState from '@hooks/useDetailState';
+import useAuthState from '@hooks/useAuthState';
+import themeState from '@hooks/themeState';
 import '@styles/global.css';
 
 const App = () => {
   const initialState = useInitialState(); 
   const detailState = useDetailState();
+  const authState = useAuthState();
+  const theme = themeState();
+//   console.log("si llega mi hook themea app", theme)
   return (
     <DetailsContext.Provider value = {detailState}>
-    <AppContext.Provider value={initialState}>
+     <AppContext.Provider value={initialState}>
+      <AuthContext.Provider value ={authState}>
+      <ThemeContext.Provider value={theme}>
       <BrowserRouter>
         <Layout>
           <Header/>
@@ -40,6 +49,8 @@ const App = () => {
           </Routes>
         </Layout>    
       </BrowserRouter>
+      </ThemeContext.Provider>
+     </AuthContext.Provider>
     </AppContext.Provider>
     </DetailsContext.Provider>
   )

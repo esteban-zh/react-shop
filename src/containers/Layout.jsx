@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import ThemeContext from '@context/ThemeContext';
+import '@styles/Layout.scss'
 
 const Layout = ({children}) => {
+  const { stateTheme } = useContext(ThemeContext);
+
   return (
-      <div className="layout">
+      <div className={stateTheme}>
           {children}
       </div>
   )
 }
 
-export default Layout
+export default Layout;
