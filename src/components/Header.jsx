@@ -23,8 +23,6 @@ const Header = () => {
   const { stateAuth } = useContext(AuthContext);
   const { stateTheme, handleTheme } = useContext(ThemeContext);
 
-console.log("statetheme en header", stateTheme)
-
   const handleToggle = () => {
     setToggle(!toggle);
   };

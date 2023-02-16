@@ -28,7 +28,7 @@ const App = () => {
   const theme = themeState();
 //   console.log("si llega mi hook themea app", theme)
   return (
-    <DetailsContext.Provider value = {detailState}>
+      <DetailsContext.Provider value = {detailState}>
      <AppContext.Provider value={initialState}>
       <AuthContext.Provider value ={authState}>
       <ThemeContext.Provider value={theme}>

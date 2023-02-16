@@ -12,10 +12,9 @@ const themeState = () => {
             setStateTheme("light")
         }
     }
-    console.log ("este es el inicial theme en el customer hook", stateTheme);
     return {
-        stateTheme, 
-        handleTheme,
+        stateTheme,
+        handleTheme
     }
 }
 

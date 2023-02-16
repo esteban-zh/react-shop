@@ -1,14 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useCallback } from 'react'
 import AppContext from "@context/AppContext";
 import close from '@icons/icon_close.png'
 import '@styles/ShoppingCartItem.scss'
 
 const ShoppingCartItem = ( {product, indexValue} ) => {
   const { removeToCart } = useContext(AppContext);
-
-  const handleClickRemoveToCart = index => {
-    removeToCart(index);
-  }
+  console.log("se renderiza shooping")
+  const handleClickRemoveToCart = useCallback(index => {
+    removeToCart(index), [index];
+  }) 
 
   return (
     <>
@@ -23,4 +23,4 @@ const ShoppingCartItem = ( {product, indexValue} ) => {
   )
 }
 
-export default ShoppingCartItem
+export default ShoppingCartItem;
